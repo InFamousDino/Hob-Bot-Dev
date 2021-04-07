@@ -1,5 +1,7 @@
 const filename = require('path').basename(__filename).split(".")[0]
 exports.execute = (client, message, args) => {
+    const Tick = message.guild.emojis.cache.get("824145757241081949")
+    const Fail = message.guild.emojis.cache.get("824145774324744193")
 
     const { token } = require('../../config.json')
 
@@ -7,7 +9,7 @@ exports.execute = (client, message, args) => {
         message.channel.send('Resetting...')
         .then(msg => client.destroy())
         .then(() => client.login(token))
-        .then(() => message.channel.send('Hob Reset'));
+        .then(() => message.channel.send(`${Tick} Hob Reset`));
     }
 
     resetBot()

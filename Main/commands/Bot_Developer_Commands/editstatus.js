@@ -1,5 +1,8 @@
 const filename = require('path').basename(__filename).split(".")[0]
 exports.execute = (client, message, args) => {
+    const Tick = message.guild.emojis.cache.get("824145757241081949")
+    const Fail = message.guild.emojis.cache.get("824145774324744193")
+
     client.user.setPresence({
         activity: {
             name: args.join(" "),
@@ -7,7 +10,7 @@ exports.execute = (client, message, args) => {
         }
     })
 
-    message.channel.send('Sucessfully set my status to ' + args.join(" ") + '.')
+    message.channel.send(`${Tick} Sucessfully set my status to ` + args.join(" ") + '.')
 }
 exports.config = {
     disabled: false, // if the command is disabled

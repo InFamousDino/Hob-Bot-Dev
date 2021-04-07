@@ -1,17 +1,20 @@
 const filename = require('path').basename(__filename).split(".")[0]
+
 exports.execute = (client, message, args) => {
   const target = message.mentions.users.first();
+
+  const Tick = message.guild.emojis.cache.get("824145757241081949")
+  const Fail = message.guild.emojis.cache.get("824145774324744193")
+
         if(target){
-            let mainRole = message.guild.roles.cache.find(role => role.name === 'Cool People');
             let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
  
             let memberTarget= message.guild.members.cache.get(target.id);
  
             memberTarget.roles.remove(muteRole.id);
-            memberTarget.roles.add(mainRole.id);
-            message.channel.send(`<@${memberTarget.user.id}> has been unmuted`);
+            message.channel.send(`${Tick} <@${memberTarget.user.id}> has been unmuted`);
         } else{
-            message.channel.send('Cant find that member!');
+            message.channel.send(`${Fail} Cant find that member!`);
         }
 }
 

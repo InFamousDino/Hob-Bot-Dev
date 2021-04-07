@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const filename = require("path").basename(__filename).split(".")[0];
 exports.execute = (client, message, args) => {
   const embed = new Discord.MessageEmbed();
+  const Tick = message.guild.emojis.cache.get("824145757241081949")
+  const Fail = message.guild.emojis.cache.get("824145774324744193")
 
   embed
     .setTitle("**Bot Configuration**")
