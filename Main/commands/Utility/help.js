@@ -23,7 +23,7 @@ exports.execute = (client, message, args) => {
     
     {
         name: '**Utility Commands**',
-        value: '`help`, `support`, `avatar`.',
+        value: '`help`, `support`, `avatar`, `ping`.',
         inline: true
     },
 
