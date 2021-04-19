@@ -44,7 +44,7 @@ exports.execute = (client, message, args) => {
         }
     )
 
-    //member.ban(reason)
+    member.ban(reason)
     message.channel.send(banlog)
 }
 exports.config = {
