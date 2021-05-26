@@ -4,6 +4,7 @@ const config = require('./config.json')
 const embedupdatemessage = new Discord.MessageEmbed
 const { LogsChannel } = require('./config.json')
 
+client.settings = {}
 client.commands = new Map()
 client.aliases = new Map()
 
