@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 const filename = require('path').basename(__filename).split(".")[0]
 exports.execute = (client, message, args) => {
     const embed = new Discord.MessageEmbed()
-    const embed2 = new Discord.MessageEmbed()
 
     const { dev } = require('../../config.json')
     const { member } = message
